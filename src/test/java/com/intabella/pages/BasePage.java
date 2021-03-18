@@ -17,6 +17,8 @@ import java.util.List;
 
 public abstract class BasePage {
 
+    //Added git practice
+
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
