@@ -1,5 +1,6 @@
 package com.intabella.step_definitions.VehicleOdometerPage;
 
+import com.intabella.pages.BasePage;
 import com.intabella.pages.VehicleCostsPage;
 import com.intabella.pages.VehicleOdometerPage;
 import com.intabella.utilities.BrowserUtils;
@@ -44,7 +45,7 @@ public class US_017_StepDefs {
 
     @When("the user clicks {string} button")
     public void theUserClicksButton(String buttonName) {
-        //BrowserUtils.theUserClicksButton(buttonName);
+
        BrowserUtils.waitFor(5);
         WebElement myButton;
         switch (buttonName) {
@@ -62,6 +63,8 @@ public class US_017_StepDefs {
             case "Pin Button" -> myButton = vehicleCostsPage.pinButton;
             case "Favorite Button" -> myButton = vehicleCostsPage.favouriteButton;
             case "Close the Sidebar Widgets Pop-up" -> myButton = vehicleCostsPage.closeThePopupButton;
+            case "Add Event" -> myButton = vehicleCostsPage.addEventButton;
+            case "Activity Tab" -> myButton = vehicleCostsPage.activityTab;
 
             default -> throw new IllegalStateException("Unexpected value: " + buttonName);
         }

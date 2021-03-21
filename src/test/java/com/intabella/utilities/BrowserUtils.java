@@ -397,7 +397,7 @@ public class BrowserUtils {
     public static int getNumberOfRecords() {
 
         String textOfNumberOfRecords = Driver.get().findElement(By.xpath("//*[starts-with(@id,'grid-custom-entity-grid')]//div/div[4]/label[3]")).getText();
-        String number = textOfNumberOfRecords.substring(8,10);
+        String number = textOfNumberOfRecords.substring(8, 10);
 
         return Integer.parseInt(number);
     }
@@ -421,4 +421,17 @@ public class BrowserUtils {
         myButton.click();
     }
 
+    public static void clickXpath(String xpath) {
+        Driver.get().findElement(By.xpath(xpath)).click();
+    }
+
+    public static boolean isClickable(WebElement el) {
+        try {
+            WebDriverWait wait = new WebDriverWait(Driver.get(), 6);
+            wait.until(ExpectedConditions.elementToBeClickable(el));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

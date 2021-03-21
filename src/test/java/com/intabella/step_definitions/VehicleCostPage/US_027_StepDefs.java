@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-public class US_27_StepDefs {
+public class US_027_StepDefs {
 
     VehicleCostsPage vehicleCostsPage = new VehicleCostsPage();
 
@@ -36,6 +36,7 @@ public class US_27_StepDefs {
             actualPinShortcutText = vehicleCostsPage.pinShortcutMenu.getText();
         }
         Assert.assertEquals(expectedPageName, actualPinShortcutText);
+
     }
 
     @Then("the user should be able to see that Page is added to the Favorites")
