@@ -1,6 +1,7 @@
 package com.intabella.pages;
 
 import com.intabella.utilities.Driver;
+import jdk.internal.org.objectweb.asm.util.Printer;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class VehicleCostsPage extends BasePage {
+
 
     public VehicleCostsPage() {
         PageFactory.initElements(Driver.get(), this);
@@ -90,6 +92,95 @@ public class VehicleCostsPage extends BasePage {
 
 
 
+
+
+
+    @FindBy(xpath = "//i[@class=\"fa-cog hide-text\"]")
+    public WebElement gridSettingsButtonn;
+
+    @FindBy(xpath = "//div[@class='column-manager-title']")
+    public WebElement gridSettings;
+
+
+    @FindBy(xpath = "//span[@class='grid-header-cell__label']")
+    public WebElement ID;
+
+    @FindBy(xpath = "//a[@data-role=\"column-manager-select-all\"]")
+    public WebElement selectall;
+
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[5]")
+    public WebElement Type;
+
+    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[2]")
+    public WebElement TYPE;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[6]")
+    public WebElement TotalPrice;
+
+    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[2]")
+    public WebElement TOTALPRICE;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[7]")
+    public WebElement Date;
+
+    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[2]")
+    public WebElement DATE;
+//DATE?
+    @FindBy(xpath = "//*[starts-with(@id,'grid-custom-entity-grid')]/div[2]/div[1]/div/div[3]/div[1]/div/a[1]")
+    public WebElement filtersButtonn;
+
+
+    @FindBy(xpath = "//a[@class='add-filter-button']")
+    public WebElement managefilters;
+
+    @FindBy(xpath = "(//label/span/.)[1]")
+    public WebElement typetext;
+
+
+    @FindBy(xpath = "(//div[@class=\"btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value\"])[1]")
+    public WebElement TypeAll;
+
+    @FindBy(xpath = "//input[@name=\"multiselect_0\"]")
+    public WebElement typeclick;
+
+
+    @FindBy(xpath = "//ul[@class=\"select2-choices\"]")
+    public WebElement choose;
+
+    @FindBy(xpath = "(//input[@name=\"multiselect_7\"])[2]")
+    public WebElement totalpriceclick;
+
+    @FindBy(xpath = "(//input[@name=\"multiselect_7\"])[3]")
+    public WebElement dateclick;
+
+    //(//span[@class="caret"])[2]
+
+   // @FindBy(xpath = "(//input[@type=\"text\"])[2]")
+   // public WebElement box;
+
+    @FindBy(xpath = "(//li[@class=\"select2-results-dept-0 select2-result select2-result-selectable\"])[1]")
+    public WebElement road;
+
+
+    @FindBy(xpath = "//button[@class=\"btn btn-primary filter-update\"]")
+    public WebElement update;
+
+    @FindBy(xpath = "(//td[@class=\"string-cell grid-cell grid-body-cell grid-body-cell-Type\"])[1]")
+    public WebElement Road;
+
+
+    @FindBy(xpath = "(//div[@class=\"select2-drop select2-drop-multi select2-display-none select2-drop-active select2-drop-auto-width\"])[2]")
+    public List <WebElement> dropdownList;
+
+
+    @FindBy(xpath = "//div[@class=\"btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value\"]")
+    public WebElement type;
+
+
+
+
+
     public WebElement getdropdown(int size) {
         WebElement number;
         //if-switch case
@@ -112,5 +203,33 @@ public class VehicleCostsPage extends BasePage {
         return number;
 
 
+        /* @FindBy(xpath = "//div[@class='column-manager-title']")
+        public WebElement gridSettings;//verify için
+
+
+      @FindBy(xpath = "//input[@id='column-c5906']")
+        public WebElement id; //id tıklamak için
+
+        @FindBy(xpath = "//span[@class='grid-header-cell__label']")
+        public WebElement ID; //verify için
+
+        @FindBy(xpath = "//input[@id='column-c5907']")
+        public WebElement Type; //tıklamak için
+
+        @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[2]")
+        public WebElement TYPE;//verify için
+
+        @FindBy(xpath = "//input[@id='column-c5908']")
+        public WebElement TotalPrice; //tıklamak için
+
+        @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[3]")
+        public WebElement TOTALPRICE;//verify için
+
+        @FindBy(xpath = "//input[@id='column-c5909']")
+        public WebElement Date; //tıklamak için
+
+        @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[3]")
+        public WebElement DATE;//verify için
+*/
     }
 }
