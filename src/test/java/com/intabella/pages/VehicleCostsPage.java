@@ -90,6 +90,19 @@ public class VehicleCostsPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"favorite-content\"]/ul/li/a")
     public List<WebElement> favoritesList;
 
+    @FindBy(xpath = "//div[2]/div[1]/div/div/div[1]/div[1]/div[2]/a")
+    public WebElement addEventButton;
+
+    @FindBy(xpath = "//*[starts-with(@id,'oro_calendar_event_form_title')]")
+    public WebElement addEventFormTitleBox;
+
+    @FindBy(css = ".btn.btn-primary")
+    public WebElement addEventFormSaveButton;
+
+    @FindBy(xpath = "//a[normalize-space()='Activity']")
+    public WebElement activityTab;
+
+
 
 
 
