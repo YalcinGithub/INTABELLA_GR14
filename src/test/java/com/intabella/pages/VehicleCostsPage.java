@@ -1,7 +1,7 @@
 package com.intabella.pages;
 
 import com.intabella.utilities.Driver;
-import jdk.internal.org.objectweb.asm.util.Printer;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -190,7 +190,32 @@ public class VehicleCostsPage extends BasePage {
     @FindBy(xpath = "//div[@class=\"btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value\"]")
     public WebElement type;
 
+    @FindBy(xpath = "//a[normalize-space()='Create Vehicle Costs']")
+    public WebElement CreateVehicleCosts;
 
+    @FindBy(xpath = "//button[@class='btn btn-success action-button']")
+    public WebElement SaveAndCloseButton;
+
+    @FindBy(xpath = "//div[@class='message']")
+    public WebElement EntitySavedMessage;
+
+    @FindBy(xpath = "(//*[@data-purpose='open-dialog-widget'])[1]")
+    public WebElement ChassisNumberPlusButton;
+
+    @FindBy(xpath = "(//*[@data-purpose='open-dialog-widget'])[2]")
+    public WebElement LicensePlateButton;
+
+    @FindBy(xpath = "//span[@class='ui-dialog-title']")
+    public WebElement SelectCarreservationWindow;
+
+    @FindBy(xpath = "(//table/tbody/tr/td/input)[1]")
+    public WebElement FirstCheckbox;
+
+    @FindBy(xpath = "//button[normalize-space()='Select']")
+    public WebElement SelectButton;
+
+    @FindBy(xpath = "//div[contains(text(),'Chassis Number: N/A')]")
+    public WebElement NewChassiName;
 
 
 
