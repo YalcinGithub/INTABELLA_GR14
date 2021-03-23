@@ -1,4 +1,4 @@
-
+@IN-325
 Feature: Store Manager I should be able to get Vehicle Costs
 
 
@@ -20,7 +20,7 @@ Feature: Store Manager I should be able to get Vehicle Costs
 	#2-Store manager/Sales Manager can change page number for getting following vehicle costs informations
 	#3-Store manager/Sales Manager can change the entity number by clicking the View Per Page dropdown(10,25,50,100)
 	#4-Store manager/Sales Manager can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats
-  @IN-299 @IN-304
+  @IN-320 @IN-324
   Scenario: US-33 Store manager can see vehicle costs informations once navigate to vehicle page Test
     And the user navigates to "Fleet" , "Vehicle Costs"
     Then the user should be able to see the page "Vehicle Costs"
@@ -34,7 +34,7 @@ Feature: Store Manager I should be able to get Vehicle Costs
 	#{color:#DE350B}2-Store manager/Sales Manager can change page number for getting following vehicle costs informations{color}
 	#3-Store manager/Sales Manager can change the entity number by clicking the View Per Page dropdown(10,25,50,100)
 	#4-Store manager/Sales Manager can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats
-  @IN-301 @IN-304
+  @IN-321 @IN-324
   Scenario: US-33 Store manager can change page number for getting following vehicle costs informations Test
     When the user clicks the right arrow
     Then the user verify sees the page number changed to two
@@ -50,7 +50,7 @@ Feature: Store Manager I should be able to get Vehicle Costs
 	#2-Store manager/Sales Manager can change page number for getting following vehicle costs informations
 	#{color:#DE350B}3-Store manager/Sales Manager can change the entity number by clicking the View Per Page dropdown(10,25,50,100){color}
 	#4-Store manager/Sales Manager can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats
-  @IN-302 @IN-304
+  @IN-322 @IN-324
   Scenario: US-33 Store manager can change the entity number by clicking the View Per Page dropdown(10,25,50,100) Test
     When the user clicks "View per page" on the top right of the page
     Then the user sees View per page options appear "10","25","50","100"
@@ -72,7 +72,7 @@ Feature: Store Manager I should be able to get Vehicle Costs
 	#2-Store manager/Sales Manager can change page number for getting following vehicle costs informations
 	#3-Store manager/Sales Manager can change the entity number by clicking the View Per Page dropdown(10,25,50,100)
 	#{color:#DE350B}4-Store manager/Sales Manager can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats{color}
-  @IN-303 @IN-304
+  @IN-323 @IN-324
   Scenario: US-33 Store manager can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats Test
     When the user clicks "Export Grid" button in the upper left corner of the page
     Then the user sees options appear csv and xlsx formats
