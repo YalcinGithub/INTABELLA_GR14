@@ -18,6 +18,61 @@ public class VehicleOdometerPage extends BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+    @FindBy(css = "div#container>div:nth-of-type(2)>div>div>div:nth-of-type(2)>a")
+    public WebElement createVehicleOdometerBtn;
+
+    @FindBy(xpath = "//div[@class='btn-group pull-right']//button")
+    public WebElement saveAndCloseBtn;
+
+
+    @FindBy(xpath = "//span[@class='title title-level-1']")
+    public WebElement fleetTab;
+
+    @FindBy(xpath = "(//span[@class='title title-level-2'])[2]")
+    public WebElement vehicleOdometerModule;
+
+
+    @FindBy(linkText = "Create Vehicle Odometer")
+    public WebElement CreateVehOdomBtn;
+
+
+
+    @FindBy(xpath = "//button[contains(@class,'btn btn-medium')]")
+    public WebElement addBtn;
+
+    @FindBy(xpath = "//div[contains(@class,'ui-dialog-titlebar ui-corner-all')]//span")
+    public WebElement titleSelectCarReservation;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    public WebElement checkBox;
+
+    @FindBy(xpath = "//button[text()='Select']")
+    public WebElement selectBtn;
+
+    @FindBy(xpath = " //button[@type='submit']")
+    public WebElement saveAndCloseBtn2;
+
+    @FindBy(xpath = "(//div[@class='message'])[2]" )
+    public WebElement dontHavePermissionWarning;
+
+    @FindBy(xpath = "(//div[@class='message'])" )
+    public WebElement dontHavePermissionFirstWarningMessage;
+
+    @FindBy(xpath = "" )
+    public WebElement EntitySavedMessage;
+
+    @FindBy(xpath = " (//div[@class='pull-left']//a)[3]" )
+    public WebElement licensePlateBoard;
+
+    @FindBy(xpath = "//td[text()='try001']" )
+    public WebElement licensePlateSelectCarreservationPage;
+
+
+
+
+
+
+
     @FindBy(xpath = "//div[2]/div[2]/div[2]/div/table/tbody/tr[1]/td[2]")
     public WebElement firstRowInformation;
 

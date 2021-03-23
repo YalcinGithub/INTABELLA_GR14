@@ -17,6 +17,13 @@ import java.util.List;
 
 public abstract class BasePage {
 
+
+
+
+
+    @FindBy(linkText = "Create Vehicle Odometer")
+    public WebElement CreateVehOdomBtn;
+
     //Added git practice
 
     @FindBy(css = "span.title-level-1")
