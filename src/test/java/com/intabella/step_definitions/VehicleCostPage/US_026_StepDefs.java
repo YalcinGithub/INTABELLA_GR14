@@ -54,7 +54,6 @@ public class US_026_StepDefs {
 
 
         jse.executeScript("arguments[0].click();", vehicleCostsPage.TotalPrice);
-        //jse.executeScript("arguments[0].click();", vehicleCostsPage.TotalPrice);
         BrowserUtils.waitFor(4);
 
 
@@ -106,7 +105,7 @@ public class US_026_StepDefs {
     public void the_user_verify_that_openned_on_the_left_side(String string) {
 
         String expected = "Manage filters";
-        //System.out.println(vehicleCostsPage.ID.getText());
+        //System.out.println(vehicleCostsPage.managefilters.getText());
         Assert.assertEquals(expected,vehicleCostsPage.managefilters.getText());
 
 
@@ -116,7 +115,7 @@ public class US_026_StepDefs {
     public void the_user_verify_search_appears(String string, String string2, String string3) {
 
         String expected = "Type";
-        //System.out.println(vehicleCostsPage.ID.getText());
+        //System.out.println(vehicleCostsPage.typetext.getText());
         Assert.assertEquals(expected,vehicleCostsPage.typetext.getText());
 
     }
@@ -128,8 +127,7 @@ public class US_026_StepDefs {
         //System.out.println(vehicleCostsPage.TypeAll.getText());
         Assert.assertEquals(expected,vehicleCostsPage.TypeAll.getText());
 
-       // vehicleCostsPage.waitUntilLoaderScreenDisappear();
-        //Assert.assertFalse(vehicleCostsPage.TypeAll.isDisplayed());
+
 
 
     }
@@ -137,24 +135,18 @@ public class US_026_StepDefs {
     @When("the user click on choose values and click the first one.")
     public void the_user_click_on_choose_values_and_click_the_first_one() {
 
-     //   List<String> menuOptions
+
         JavascriptExecutor jse=(JavascriptExecutor) Driver.get();
         jse.executeScript("arguments[0].click();", vehicleCostsPage.choose);
         BrowserUtils.waitFor(4);
 
-      //  List<String> actualOptions = BrowserUtils.getElementsText(vehicleCostsPage.dropdownList);
 
-        //Assert.assertEquals(menuOptions,actualOptions);
 
 
         jse.executeScript("arguments[0].click();", vehicleCostsPage.road);
         BrowserUtils.waitFor(4);
 
-    //    List<String> expectedOptions = BrowserUtils.getElementsText(vehicleCostsPage.road);
 
-      //  Assert.assertEquals(menuOptions,expectedOptions);
-
-        //vehicleCostsPage.road.click();
 
     }
 
