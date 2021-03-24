@@ -102,6 +102,34 @@ public class VehicleCostsPage extends BasePage {
 
 
 
+    @FindBy(xpath = "//div[2]/div[2]/div[2]/div/table/tbody/tr[1]/td[4]/div/div/a")
+    public WebElement threedotpoints;
+
+    @FindBy(xpath = "//i[@class='fa-eye hide-text']")
+    public WebElement viewbutton;
+
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu detach dropdown-menu__floating']//i[@class='fa-pencil-square-o hide-text']")
+    public WebElement editbutton;
+
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu detach dropdown-menu__floating']//i[@class='fa-trash-o hide-text']")
+    public WebElement erasebutton;
+
+    @FindBy(xpath = "//a[normalize-space()='Yes, Delete']")
+    public WebElement acceptbutton;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public WebElement getdropdown(int size) {
         WebElement number;
