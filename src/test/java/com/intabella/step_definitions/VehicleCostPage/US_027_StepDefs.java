@@ -17,12 +17,11 @@ public class US_027_StepDefs {
     public void theUserShouldBeAbleToSeeTheWidget(String expectedWidgetName) {
         BrowserUtils.waitFor(2);
         int sizeOfSidebar = vehicleCostsPage.sidebarWidgetsList.size();
-        System.out.println("sizeOfSidebar = " + sizeOfSidebar);
         String actualWidget = vehicleCostsPage.sidebarWidgetsList.get(sizeOfSidebar - 1).getText();
-        if (actualWidget.length() < 1) {
-            System.out.println("loopa girdi");
-            actualWidget = vehicleCostsPage.sidebarWidgetsList.get(sizeOfSidebar - 1).getAttribute("title");
-        }
+
+//        if (actualWidget.length() < 1) {
+//            actualWidget = vehicleCostsPage.sidebarWidgetsList.get(sizeOfSidebar - 1).getAttribute("title");
+//        }
         Assert.assertEquals(expectedWidgetName, actualWidget);
         deleteAllTheWidgets();
     }
@@ -69,12 +68,17 @@ public class US_027_StepDefs {
 
     public void deleteAllTheWidgets() {
         while (vehicleCostsPage.sidebarWidgetsList.size() > 0) {
-            BrowserUtils.waitFor(1);
+            BrowserUtils.waitFor(5);
             Driver.get().findElement(By.xpath("//*[@id=\"mCSB_1_container\"]/div/div[1]/div[2]/div/div[1]/div[3]/button")).click();
             BrowserUtils.waitFor(1);
             Driver.get().findElement(By.xpath("//div[@class='dropdown open']//a[@title='Remove'][normalize-space()='Remove']")).click();
             BrowserUtils.waitFor(1);
             Driver.get().findElement(By.xpath("//a[normalize-space()='Yes, Delete']")).click();
         }
+    }
+
+    @When("user deletes")
+    public void userDeletes() {
+        deleteAllTheWidgets();
     }
 }

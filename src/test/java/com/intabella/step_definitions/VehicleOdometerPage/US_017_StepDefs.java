@@ -24,11 +24,8 @@ public class US_017_StepDefs {
     @And("the user selects all columns")
     public void theUserSelectsAllColumns() {
 
-        // vehicleOdometerPage.showAllGridsButton.click();
         BrowserUtils.waitFor(1);
-        System.out.println("js js js select all kismina girdi");
         js.executeScript("arguments[0].click();", vehicleOdometerPage.selectAllButton);
-        //vehicleOdometerPage.selectAllButton.click();
     }
 
     @And("the user navigates to {string} , {string}")
@@ -68,10 +65,12 @@ public class US_017_StepDefs {
 
             default -> throw new IllegalStateException("Unexpected value: " + buttonName);
         }
-
         assert myButton != null;
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(1);
         myButton.click();
+
+
+
 
     }
 
@@ -93,20 +92,7 @@ public class US_017_StepDefs {
             }
         }
 
-        // will try a new code, code block commented out
-        //=================================================
-//        for (int i = 1; i < 12; i++) {
-//            String xpath = "//div[2]/div[2]/div[2]/div/table/thead/tr/th";
-//            //String xpath = "(//span[@class='grid-header-cell__label'])["+i+ "]";
-//            String columnLabel = Driver.get().findElements(By.xpath(xpath)).get(0).getText().toUpperCase();
-//            if (!columnLabel.equals("")){
-//                columnsActual.add(columnLabel);
-//            }
-//        }
-        //List<String> columnsActual = BrowserUtils.getElementsText(vehicleOdometerPage.actualColumns);
         Assert.assertEquals(columnsExpected, columnsActual);
-        System.out.println("columnsExpected = " + columnsExpected);
-        System.out.println("columnsActual   = " + columnsActual);
     }
 
     @Then("the user should be able to see the {string} menu")
@@ -119,7 +105,6 @@ public class US_017_StepDefs {
             default -> throw new IllegalStateException("Unexpected value: " + arg0);
         }
         Assert.assertTrue(element.isDisplayed());
-        BrowserUtils.waitFor(3);
     }
 
     @When("the user selects {string} option")
@@ -137,7 +122,7 @@ public class US_017_StepDefs {
     public void theUserEntersKeywordInToTheInputBox(String arg0) {
 
         vehicleOdometerPage.inputBox.sendKeys(arg0);
-        BrowserUtils.waitFor(4);
+
     }
 
     @Then("the user should be able to see the results for filter type {string}, condition {string}, and input {string}")
@@ -151,6 +136,7 @@ public class US_017_StepDefs {
         List<WebElement> resultsOfColumnOfType = new ArrayList<>();
 
         for (WebElement resultRow : results) {
+
             resultsOfColumnOfType.add(Driver.get().findElement(By.xpath(xpathOfResults + "/td[" + (indexColumnOfType + 1) + "]")));
         }
 
