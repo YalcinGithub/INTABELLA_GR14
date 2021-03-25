@@ -39,3 +39,6 @@ Feature:Truck Driver using sidebar widgets, pins and favorite buttons in Vehicle
     Scenario: Truck driver can make the page favorite by using favorite sign
     When the user clicks "Favorite Button" button
     Then the user should be able to see that Page is added to the Favorites
+
+      Scenario:
+        When user deletes

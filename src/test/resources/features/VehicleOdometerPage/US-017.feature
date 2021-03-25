@@ -26,9 +26,9 @@ Feature: Truck_Driver_filtering_functions_in_Vehicle_Odometer
     Then the user clicks "Filter criteria" button
     Then the user should be able to see the "Filter criteria dropdown" menu
     Then the user selects "Is Equal To" option from the dropdown option menu
-    And the user enters "jon" keyword in to the  input box
+    And the user enters "nuri" keyword in to the  input box
     And the user clicks "Update" button
-    Then the user should be able to see the results for filter type "Driver", condition "Is Equal To", and input "jon"
+    Then the user should be able to see the results for filter type "Driver", condition "Is Equal To", and input "nuri"
 
   @IN-268 @IN-270
   Scenario: Test of IN-18 Truck driver can refresh the page by using Refresh button
