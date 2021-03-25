@@ -87,8 +87,8 @@ public class US_030_GeneralInfoAboutVehicleCost {
         Assert.assertTrue(vehicleCostsPage.dateAllN.isEnabled());
     }
 
-    @Then("the user should be able to click {string} button")
-    public void the_user_should_be_able_to_click_button(String string) {
+    @Then("the user should be able to click Activities Refresh button")
+    public void the_user_should_be_able_to_click_button1(String string) {
         BrowserUtils.waitFor(2);
 //        if (string == "Refresh") {
             vehicleCostsPage.refreshBtn.click();
@@ -160,14 +160,14 @@ public class US_030_GeneralInfoAboutVehicleCost {
 
     @When("the click {string} button")
     public void the_click_button(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
     }
 
     @Then("{string} and {string} menus should disappear")
     public void and_menus_should_disappear(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
     }
 
 }

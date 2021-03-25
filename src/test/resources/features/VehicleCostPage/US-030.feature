@@ -29,7 +29,7 @@ Feature:
 		Given the user click on "Fleet" and click on "Vehicle Costs"
 		When the user should navigate to "Vehicle Costs" page
 		Then the user click on specific vehicle cost
-		And the user should see all informations about that vehicle cost	
+		And the user should see all informations about that vehicle cost
 
 	#{color:#00875a}*User Story :* {color}
 	#
@@ -80,7 +80,7 @@ Feature:
 	Scenario: Truck Driver can refresh the activities by using refresh button US-030 Test
 		Given the user click on "Fleet" and click on "Vehicle Cost"
 		When the user should navigate to "Vehicle Costs" page
-		And the user should be able to click "Activities Refresh" button
+		And the user should be able to click Activities Refresh button
 		Then the event should be refreshed	
 
 	#{color:#00875a}*User Story :* {color}
@@ -184,7 +184,8 @@ Feature:
 	# 9-Truck driver can reset the filtering settings by using Reset button for attachments
 	@IN-281 @IN-284
 	Scenario: Truck driver can use Grid Settings button for arranging demanded columns for finding demanded attachment US-030 Test
-		When the user clicks on the "Grid Settings" on the right.
+		When the user clicks "Grid Settings" button
+
 		Then the user verify that  "Grid Settings" informations page openned.
 		When the user "Select All" is clicked.
 		Then the user verify sees "Id" properties appear on the vehicle cost page page.
@@ -239,7 +240,8 @@ Feature:
 	@IN-283 @IN-284
 	Scenario: Truck driver can reset the filtering settings by using Reset button for attachments US-030 Test
 		Given the user click on "Fleet" and click on "Vehicle Cost"
-		When the user should navigate to "Vehicle Costs" pageThen the user click on "filter button"
+		When the user should navigate to "Vehicle Costs" page
+		Then the user click on "filter button"
 		And the user should see "Manage Filters" button
 		When the user click on the "Manage Filters" button
 		Then the user should see three options
