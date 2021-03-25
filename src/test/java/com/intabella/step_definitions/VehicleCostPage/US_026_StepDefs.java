@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class US_026_StepDefs {
+    //corrected and checked by YY
 
     VehicleCostsPage vehicleCostsPage =new VehicleCostsPage(); //her methodda kullanılacağı için en başa yazdım.
 
