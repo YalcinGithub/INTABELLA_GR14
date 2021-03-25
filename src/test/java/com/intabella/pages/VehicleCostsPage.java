@@ -119,9 +119,33 @@ public class VehicleCostsPage extends BasePage {
     public WebElement acceptbutton;
 
 
+    //Nuri
+    @FindBy(xpath = "//*[starts-with(@id, 'oro_calendar_event_form_title')]")
+    public WebElement firstVehicleCost;
 
+    @FindBy(xpath = "//*[@id='ui-multiselect-14-14-option-0']")
+    public WebElement typeN;
 
+    @FindBy(xpath = "//*[@id='ui-multiselect-14-14-option-1']")
+    public WebElement totalPriceN;
 
+    @FindBy(xpath = "//*[@id='ui-multiselect-14-14-option-2']")
+    public WebElement dateN;
+
+    @FindBy(xpath = "(//div[@class='btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value'])[2]")
+    public WebElement dateAllN;
+
+    @FindBy(className = "fa-repeat")
+    public WebElement refreshBtn;
+
+    @FindBy(xpath = "//a[@data-action-name='goto_next']")
+    public WebElement olderBtn;
+
+    @FindBy(xpath = "//a[@data-action-name='goto_previous']")
+    public WebElement newerBtn;
+
+    @FindBy(xpath = "//i[text()[normalize-space()='Next']]")
+    public WebElement nextBtn;
 
 
 
@@ -256,8 +280,5 @@ public class VehicleCostsPage extends BasePage {
                 throw new IllegalStateException("Unexpected value: " + size);
         }
         return number;
-
-
-
     }
 }
