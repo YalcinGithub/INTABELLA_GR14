@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US_021_StepDefs {
+public class US_022_StepDefs {
     VehicleOdometerPage vehiclesOdometersPage = new VehicleOdometerPage();
     DashboardPage dashboardPage = new DashboardPage();
 
