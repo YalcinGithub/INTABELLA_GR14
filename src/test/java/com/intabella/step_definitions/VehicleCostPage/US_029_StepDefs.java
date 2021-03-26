@@ -3,19 +3,23 @@ package com.intabella.step_definitions.VehicleCostPage;
 import com.intabella.pages.DashboardPage;
 import com.intabella.pages.VehicleCostsPage;
 import com.intabella.utilities.BrowserUtils;
+import com.intabella.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class CreatingCostsAndAddingNumbersStepDefs {
+public class US_029_StepDefs {
 
     VehicleCostsPage vehicleCostsPage = new VehicleCostsPage();
     DashboardPage dashboardPage = new DashboardPage();
 
     @Given("the user is on the {string} page")
-    public void the_user_is_on_the_page(String string) {
+    public void the_user_is_on_the_page(String expectedTitle) {
 
+        BrowserUtils.waitFor(5);
+        String actualTitle = Driver.get().getTitle();
+        Assert.assertEquals("Dashboard",actualTitle);
 
     }
 
