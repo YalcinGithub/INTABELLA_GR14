@@ -33,6 +33,7 @@ public class LoginStepDefs {
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() throws InterruptedException {
         BrowserUtils.waitFor(5);
+        System.out.println("Dashboard");
         String actualTitle = Driver.get().getTitle();
         BrowserUtils.waitFor(10);
         Assert.assertEquals("Dashboard",actualTitle);

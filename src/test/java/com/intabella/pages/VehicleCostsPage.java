@@ -259,6 +259,33 @@ public class VehicleCostsPage extends BasePage {
     public WebElement NewChassiName;
 
 
+    //Adam VehicleCostsPage locators
+    //US-032
+    @FindBy(xpath = "//div[2]/div/table/tbody/tr[1]")
+    public WebElement firstTypeColumn;
+
+    @FindBy(xpath = "//h5/span")
+    public WebElement generalInformationButton;
+
+    @FindBy(xpath = "//a[@title='Add attachment']")
+    public WebElement addAttachmentButton;
+
+    @FindBy(xpath = "//span[@id='ui-id-2']")
+    public WebElement AddAttachmentPopUp;
+
+    @FindBy(xpath = "//*[starts-with(@id,'oro_attachment_file_file-uid')]")
+    public WebElement ChooseFile;
+
+    @FindBy(xpath = "(//*[@type= 'submit'])[2]")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[@class='message']")
+    public WebElement attachmentCreatedMessage;
+
+    @FindBy(xpath = "//span[normalize-space()='General Information']")
+    public WebElement GeneralInformationPage;
+
+
 
     public WebElement getdropdown(int size) {
         WebElement number;
