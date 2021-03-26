@@ -19,7 +19,7 @@ public class US_029_StepDefs {
 
         BrowserUtils.waitFor(5);
         String actualTitle = Driver.get().getTitle();
-        Assert.assertEquals("Dashboard",actualTitle);
+        Assert.assertEquals(expectedTitle,actualTitle);
 
     }
 
